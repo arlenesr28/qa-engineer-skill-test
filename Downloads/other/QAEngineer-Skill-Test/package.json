@@ -21,10 +21,12 @@
   },
   "homepage": "https://github.com/arlenesr28/qa-engineer-skill-test#readme",
   "devDependencies": {
+    "@cypress-audit/lighthouse": "^1.3.1",
     "@faker-js/faker": "^9.0.3",
     "cypress": "^13.15.0"
   },
   "dependencies": {
+    "cypress-audit": "^1.1.0",
     "mocha": "^10.7.3"
   }
 }

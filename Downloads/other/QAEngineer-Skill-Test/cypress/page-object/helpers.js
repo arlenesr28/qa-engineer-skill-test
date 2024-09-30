@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 import { faker } from "@faker-js/faker";
+import "@cypress-audit/lighthouse/commands";
 
 // getting a random name
 let randomFirstName = faker.person.firstName()
@@ -10,6 +11,7 @@ let randomEmail = faker.internet.email()
 // function to navigate to the website 
 export function navigate() {
     cy.visit("/");
+    // cy.lighthouse();
 }
 
 // function to choose a product

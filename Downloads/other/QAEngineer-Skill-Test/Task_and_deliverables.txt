@@ -1,0 +1,38 @@
+Framework Selection
+I chose Cypress for this skill test due to its user-friendly nature and ease of management. 
+The framework offers a comprehensive and intuitive approach to testing, making it accessible for both beginners and experienced developers. 
+Cypress's official website serves as an extensive knowledge base, providing a wealth of documentation, tutorials, and best practices. 
+This abundance of information ensures that users can quickly find solutions to their testing challenges and stay updated with the latest features and techniques.
+
+Test Case Design
+Preconditions
+- The user needs to have the url: https://automationexercise.com
+- A user with first name and Last name and email  to create a new account
+
+Test Steps
+- Navigate to the given url: https://automationexercise.com
+- Go to the products section and scroll down to find the third product 
+- Click on View Product link and you will be redirected to the Product details page
+- Add a quantity for that product and click on Add to cart button
+- On the modal you will get, click on View Cart link and you will be redirected to the Shopping cart page
+- Click on Proceed to Checkout button and you will get a new modal
+- Click on Register / Login link inside the modal and you will be redirected to the login page
+- Go to New User Signup! Section and Enter a Name and an Email and click on Signup button
+- You will be redirected to the Account Information page
+- Add all the information needed 
+- Scroll down to the Address information page and add all the information needed
+- Click on Create Account button and you will get a success message if your account was created successfully 
+- Click on the Continue button, you will be logged in  
+-  Go to the cart section and click on Proceed to Checkout button and you will see the checkout information page
+- Check all your data is ok
+- Scroll down and click on Place Order button 
+- You will be redirected to the Payment page
+- Add the Name and the Credit Card information 
+- Click on Pay and Confirm Order button 
+- You will receive a Congratulation message if your order was completed successfully 
+- Click on the Continue button and your checkout will be completed
+
+Expected Results 
+- You will be able to search a product, add the product to the cart and complete the purchase 
+- If you don’t have user, you will be able to create a new user and make the purchase with that user 
+- You will be able to navigate in the page and log out anytime you want
