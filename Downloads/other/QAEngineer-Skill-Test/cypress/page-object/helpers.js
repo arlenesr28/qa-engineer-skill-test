@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 import { faker } from "@faker-js/faker";
-import "@cypress-audit/lighthouse/commands";
 
 // getting a random name
 let randomFirstName = faker.person.firstName()
@@ -11,7 +10,6 @@ let randomEmail = faker.internet.email()
 // function to navigate to the website 
 export function navigate() {
     cy.visit("/");
-    // cy.lighthouse();
 }
 
 // function to choose a product
@@ -70,8 +68,8 @@ export function registerLogin () {
     cy.get('[data-qa="city"]').type(faker.location.city())
     cy.get('[data-qa="zipcode"]').type(faker.location.zipCode())
     cy.get('[data-qa="mobile_number"]').type(faker.phone.number({ style: 'international' }))
-    cy.get('[data-qa="create-account"]').click()
-    cy.get('[data-qa="continue-button"]').click()
+    cy.get('[data-qa="create-account"]').should('be.visible').click()
+    cy.get('[data-qa="continue-button"]').should('be.visible').click()
 }
 
 export function Checkout() {
@@ -81,7 +79,8 @@ export function Checkout() {
     cy.get('.col-sm-6 > .btn').click()
     // scroll to bottom
     cy.scrollTo('bottom')
-    cy.get(':nth-child(7) > .btn').click()
+    // click on Place Order button
+    cy.get(':nth-child(7) > .btn').should('be.visible').click()
     // addind fake credit card number information
     cy.get('[data-qa="name-on-card"]').type(randomFirstName + " " + randomLastName)
     cy.get('[data-qa="card-number"]').type(faker.finance.creditCardNumber())
@@ -89,8 +88,8 @@ export function Checkout() {
     cy.get('[data-qa="expiry-month"]').type(faker.date.future().getMonth())
     cy.get('[data-qa="expiry-year"]').type(faker.date.future().getFullYear())
     // click on pay button
-    cy.get('[data-qa="pay-button"]').click()
-    cy.get('[data-qa="continue-button"]').click()
+    cy.get('[data-qa="pay-button"]').should('be.visible').click()
+    cy.get('[data-qa="continue-button"]').should('be.visible').click()
 }
 
 export function logOut() {
