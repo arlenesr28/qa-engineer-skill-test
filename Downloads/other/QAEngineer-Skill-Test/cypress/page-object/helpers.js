@@ -50,12 +50,6 @@ export function registerLogin () {
     cy.get('[data-qa="signup-button"]').click()
     // adding a password
     cy.get('[data-qa="password"]').type(faker.lorem.word(8))
-    // adding birthdate, getting a random birthday in the last 50 years 
-    const randomBirthdate = faker.date.birthdate({ max: 70, min: 18, mode: 'age' })
-
-    // cy.get('[data-qa="days"]').select(randomBirthdate.getDay())
-    // cy.get('[data-qa="months"]').select(randomBirthdate.getMonth())
-    // cy.get('[data-qa="years"]').select(randomBirthdate.getFullYear())
 
     cy.scrollTo(0, 300) 
     // adding all the information needed
